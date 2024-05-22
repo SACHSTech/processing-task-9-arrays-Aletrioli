@@ -144,6 +144,9 @@ public class Sketch extends PApplet {
     }
   }
 
+  /**
+   * Draws the player as well as checking for movement
+   */
   public void playerCircle(){
     // if invincible, flash colours
     if(iFrames == true && millis() % 2 == 0){
@@ -174,6 +177,9 @@ public class Sketch extends PApplet {
     ellipse(fltPlayerX, fltPlayerY, 25, 25);    
   }
 
+  /**
+   * Checks player health, drawing a rectangle for each life and ending the game at 0 lives
+   */
   public void playerHealth(){
     stroke(82, 0, 0);
     fill(255, 51, 51);
@@ -207,6 +213,9 @@ public class Sketch extends PApplet {
 
   }
 
+  /**
+   * Checks if player is overlapping any snow, and removes health if they are
+   */
   public void collision(){
 
     // check if touching
@@ -239,6 +248,9 @@ public class Sketch extends PApplet {
     }
   }
 
+  /**
+   * Increases score, increased more if down arrow held, less if up arrow held
+   */
   public void score() {
     // score
     fill(255);
